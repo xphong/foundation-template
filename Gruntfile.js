@@ -28,6 +28,18 @@ module.exports = function(grunt) {
 			]
 		},
 
+    uncss: {
+      dist: {
+        files: {
+          'dist/css/app.css': ['app/index.html']
+        }
+      },
+      options: {
+        ignore: [],
+        report: 'min'
+      }
+    },
+
     cssmin: {
       minify: {
         src: 'dist/css/app.css',
@@ -139,10 +151,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-uncss');
 
 	grunt.registerTask('build', ['sass']);
 	grunt.registerTask('default', ['build', 'connect:app', 'watch']);
 	grunt.registerTask('validate-js', ['jshint']);
 	grunt.registerTask('server-dist', ['connect:dist']);
-  grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'uglify', 'concat', 'copy:dist', 'usemin', 'cssmin:minify']);
+  grunt.registerTask('publish', ['clean:dist', 'validate-js', 'useminPrepare', 'uglify', 'concat', 'copy:dist', 'usemin', 'uncss', 'cssmin:minify']);
 };

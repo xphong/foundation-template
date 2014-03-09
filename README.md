@@ -1,7 +1,7 @@
 foundation-template
 ===================
 
-Foundation 5 project template 
+Foundation 5 project template
 
 [Base - generator zf-5](https://github.com/juliancwirko/generator-zf5)
 
@@ -34,3 +34,4 @@ grunt server-dist
 * mincss
 * uglify
 * copy
+* uncss
