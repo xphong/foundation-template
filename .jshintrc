@@ -1,0 +1,20 @@
+{
+  "node": true,
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "unused": true,
+  "indent": 2,
+  "strict" : false,
+  "trailing": true,
+  "browser": true,
+  "devel": true,
+  "quotmark": "single",
+  "white" : false,
+  "globals": {
+    "Modernizr" : false,
+    "jQuery": false,
+    "$": false
+  }
+}
